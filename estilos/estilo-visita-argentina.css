@@ -5,18 +5,33 @@
 body {
     font-family: Arial, sans-serif;
   }
+
   nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #333;
-    color: white;
     padding: 10px;
+    padding-right: 20px;
   }
+
   nav a {
     color: white;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 8px 20px;
   }
+
   nav a:hover {
     background-color: #555;
+  }
+
+  .logo {
+    margin-right: auto; /* Empuja el logo hacia la izquierda */
+    margin-left: 20px;
+  }
+  
+  .logo img {
+    width: 50px; 
   }
 
 .main-image {
@@ -43,6 +58,9 @@ body {
   -ms-flex: 1;
   flex: 1;
   padding: 10px;
+  color: cornflowerblue;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 iframe {
@@ -59,7 +77,6 @@ div.gallery {
 
 div.gallery:hover {
   border: 1px solid #777;
-  opacity: 0.5;
 }
 
 div.gallery img {
@@ -70,6 +87,28 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Agrega estilos al botón "Ver más" */
+.ver-mas-btn {
+  background-color: #4CAF50; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.ver-mas-btn:hover {
+  background-color: salmon; /* Color de fondo cuando se pasa el ratón por encima */
 }
 
 section {
@@ -95,5 +134,19 @@ footer {
     .row {
       -webkit-flex-direction: column;
       flex-direction: column;
+    }
+
+    nav {
+      flex-direction: column; /* Cambia a disposición de columna en dispositivos móviles */
+      align-items: center; /* Centra los elementos en dispositivos móviles */
+    }
+  
+    .logo {
+      margin: 0;
+      margin-bottom: 10px; /* Agrega espacio entre el logo y los enlaces en dispositivos móviles */
+    }
+  
+    nav a {
+      margin: 10px 0; /* Espacio entre los enlaces en dispositivos móviles */
     }
   }
